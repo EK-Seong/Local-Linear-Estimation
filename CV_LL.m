@@ -1,4 +1,8 @@
-function cv = CV(h,Y,X)
+% This function returns the cross-validation criterion of the Local linear estimator, given bandwidth
+% For estimation of IMSE, we use LOO prediction error
+% Input arguments are bandwidth(h), dep var(Y), regressor(X)
+
+function cv = CV_LL(h,Y,X)
     n = size(Y,1);
 
     cv = 0;

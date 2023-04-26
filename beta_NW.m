@@ -1,10 +1,10 @@
-% This is the Local linear estimator.
-% The output is the estimate (m(x),m'(x))'
+% This is the Nadaraya-Watson estimator.
+% The output is the estimate m(x)
 % The inputs are respectively, the evaluation point(x), bandwith(h), dependent var(Y), regressor(X)
 
-function b = beta_LL(x,h,Y,X)
+function b = beta_NW(x,h,Y,X)
     n = size(Y,1);
-    Z = [ones(n,1),X-x];
+    Z = ones(n,1);
 
     k = zeros(1,n);
     for i = 1:n
